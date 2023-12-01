@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/loginFragment">
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.example.farmaciamobile.view.LoginFragment"
+        android:label="Login"
+        tools:layout="@layout/fragment_login">
+        <action
+            android:id="@+id/acao_loginFragment_cadastrarUsuarioFragment"
+            app:destination="@id/cadastrarUsuarioFragment" />
+        <action
+            android:id="@+id/acao_loginFragment_menuFragment"
+            app:destination="@id/menuFragment" />
+        <action
+            android:id="@+id/acao_loginFragment_redefinirSenhaFragment"
+            app:destination="@id/redefinirSenhaFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/menuFragment"
+        android:name="com.example.farmaciamobile.view.MenuFragment"
+        android:label="Menu"
+        tools:layout="@layout/fragment_menu" >
+        <action
+            android:id="@+id/acao_menuFragment_visualizarProdutoFragment"
+            app:destination="@id/visualizarProdutoFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/cadastrarUsuarioFragment"
+        android:name="com.example.farmaciamobile.view.CadastrarUsuarioFragment"
+        android:label="Cadastro"
+        tools:layout="@layout/fragment_cadastrar_usuario" />
+    <fragment
+        android:id="@+id/visualizarProdutoFragment"
+        android:name="com.example.farmaciamobile.view.VisualizarProdutoFragment"
+        android:label="Produto"
+        tools:layout="@layout/fragment_visualizar_produto" >
+        <argument
+            android:name="produto"
+            app:argType="modelDominio.Produto" />
+        <action
+            android:id="@+id/acao_visualizarProdutoFragment_comprovanteFragment"
+            app:destination="@id/comprovanteFragment" />
+        <action
+            android:id="@+id/acao_visualizarProdutoFragment_menuFragment"
+            app:destination="@id/menuFragment"
+            app:popUpTo="@id/menuFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/novaSenhaFragment"
+        android:name="com.example.farmaciamobile.view.NovaSenhaFragment"
+        android:label="Nova Senha"
+        tools:layout="@layout/fragment_nova_senha" >
+        <action
+            android:id="@+id/acao_novaSenhaFragment_loginFragment"
+            app:destination="@id/loginFragment"
+            app:popUpTo="@id/loginFragment"
+            app:popUpToInclusive="true" />
+        <argument
+            android:name="usuario"
+            app:argType="modelDominio.Usuario" />
+    </fragment>
+    <fragment
+        android:id="@+id/redefinirSenhaFragment"
+        android:name="com.example.farmaciamobile.view.RedefinirSenhaFragment"
+        android:label="Redefinir Senha"
+        tools:layout="@layout/fragment_redefinir_senha" >
+        <action
+            android:id="@+id/acao_redefinirSenhaFragment_codigoRedefinirSenhaFragment"
+            app:destination="@id/codigoRedefinirSenhaFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/codigoRedefinirSenhaFragment"
+        android:name="com.example.farmaciamobile.view.CodigoRedefinirSenhaFragment"
+        android:label="Codigo para Redefinir Senha"
+        tools:layout="@layout/fragment_codigo_redefinir_senha" >
+        <action
+            android:id="@+id/acao_codigoRedefinirSenhaFragment_novaSenhaFragment"
+            app:destination="@id/novaSenhaFragment" />
+        <argument
+            android:name="usuario"
+            app:argType="modelDominio.Usuario" />
+        <argument
+            android:name="codigo"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/comprovanteFragment"
+        android:name="com.example.farmaciamobile.view.ComprovanteFragment"
+        android:label="fragment_comprovante"
+        tools:layout="@layout/fragment_comprovante" >
+        <argument
+            android:name="compra"
+            app:argType="modelDominio.Compra" />
+        <action
+            android:id="@+id/acao_comprovanteFragment_menuFragment"
+            app:destination="@id/menuFragment"
+            app:popUpTo="@id/menuFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+</navigation>

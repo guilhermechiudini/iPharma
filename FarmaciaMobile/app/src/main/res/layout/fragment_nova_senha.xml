@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.NovaSenhaFragment"
+    android:background="@color/blue"
+    android:padding="25dp">
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/bNovaSenhaVoltar"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/icon_voltar_branco"/>
+
+    <TextView
+        style="@style/tituloCabecalho"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:id="@+id/tvNovaSenhaTitulo"
+        android:text="Nova Senha"
+        android:textColor="@color/white"/>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_below="@id/tvNovaSenhaTitulo"
+        android:gravity="center_vertical"
+        android:paddingLeft="50dp"
+        android:paddingRight="50dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/tvNovaSenhaSenha"
+            android:text="Senha"
+            android:textSize="13dp"
+            android:textColor="@color/white"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvNovaSenhaSenha"
+            android:id="@+id/etNovaSenhaSenha"
+            android:backgroundTint="@color/white"
+            android:textColor="@color/white"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/etNovaSenhaSenha"
+            android:id="@+id/tvNovaSenhaConfirmarSenha"
+            android:text="Confirmar senha"
+            android:textSize="13dp"
+            android:textColor="@color/white"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvNovaSenhaConfirmarSenha"
+            android:id="@+id/etNovaSenhaConfirmarSenha"
+            android:backgroundTint="@color/white"
+            android:textColor="@color/white"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            style="@style/botaoBranco"
+            android:background="@drawable/shape_botao_branco"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginTop="20dp"
+            android:layout_below="@id/etNovaSenhaConfirmarSenha"
+            android:id="@+id/bNovaSenhaRedefinir"
+            android:text="Redefinir Senha"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>

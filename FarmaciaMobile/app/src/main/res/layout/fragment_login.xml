@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.LoginFragment"
+    android:background="@color/blue"
+    android:paddingLeft="80dp"
+    android:paddingRight="80dp">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="118dp"
+            android:layout_marginBottom="25dp"
+            android:id="@+id/ivLoginLogo"
+            android:src="@drawable/logo"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ivLoginLogo"
+            android:id="@+id/tvLoginUsuario"
+            android:text="Usuário"
+            android:textSize="13dp"
+            android:textColor="@color/white"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvLoginUsuario"
+            android:id="@+id/etLoginUsuario"
+            android:backgroundTint="@color/white"
+            android:textColor="@color/white"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/etLoginUsuario"
+            android:id="@+id/tvLoginSenha"
+            android:text="Senha"
+            android:textSize="13dp"
+            android:textColor="@color/white"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvLoginSenha"
+            android:id="@+id/etLoginSenha"
+            android:inputType="textPassword"
+            android:backgroundTint="@color/white"
+            android:textColor="@color/white"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            style="@style/botaoBranco"
+            android:background="@drawable/shape_botao_branco"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="6dp"
+            android:layout_below="@+id/etLoginSenha"
+            android:id="@+id/bLoginEntrar"
+            android:text="Entrar"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            style="@style/botaoTextoBranco"
+            android:background="@drawable/shape_botao_texto"
+            android:layout_width="match_parent"
+            android:layout_height="16dp"
+            android:layout_below="@+id/bLoginEntrar"
+            android:id="@+id/bLoginRedefinirSenha"
+            android:text="Esqueceu sua senha? Redefinir senha."
+            android:textSize="12dp"/>
+
+    </RelativeLayout>
+
+    <androidx.appcompat.widget.AppCompatButton
+        style="@style/botaoTextoBranco"
+        android:background="@drawable/shape_botao_texto"
+        android:layout_width="match_parent"
+        android:layout_height="16dp"
+        android:layout_marginBottom="40dp"
+        android:layout_alignParentBottom="true"
+        android:id="@+id/bLoginCadastrar"
+        android:text="Não tem uma conta? Cadastrar-se."
+        android:textSize="12dp"
+        android:textStyle="bold"/>
+
+</RelativeLayout>

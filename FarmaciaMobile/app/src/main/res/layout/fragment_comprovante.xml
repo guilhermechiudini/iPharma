@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.ComprovanteFragment"
+    android:padding="25dp"
+    android:background="@color/blue">
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/bComprovanteVoltar"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/icon_voltar_branco"/>
+
+    <TextView
+        style="@style/tituloCabecalho"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:id="@+id/tvComprovanteTitulo"
+        android:text="Comprovante"
+        android:textColor="@color/white"/>
+
+    <ImageView
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="50dp"
+        android:layout_below="@id/tvComprovanteTitulo"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/ivComprovanteConferido"
+        android:src="@drawable/icon_conferido"/>
+
+    <TextView
+        style="@style/titulo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_below="@id/ivComprovanteConferido"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/tvComprovanteCompra"
+        android:text="Compra realizada"
+        android:textColor="@color/white"/>
+
+    <TextView
+        style="@style/titulo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvComprovanteCompra"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/tvComprovantePreco"
+        android:textColor="@color/white"/>
+
+    <TextView
+        style="@style/subtitulo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:layout_below="@id/tvComprovantePreco"
+        android:id="@+id/tvComprovanteSobreCompra"
+        android:text="Sobre a compra"
+        android:textColor="@color/white"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_below="@id/tvComprovanteSobreCompra"
+        android:id="@+id/tvComprovanteData"
+        android:text="Data da compra"
+        android:textColor="@color/white"
+        android:textSize="15sp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/tvComprovanteSobreCompra"
+        android:id="@+id/tvComprovanteDataDado"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:textSize="15sp"
+        android:textAlignment="viewEnd"/>
+
+    <TextView
+        style="@style/subtitulo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:layout_below="@id/tvComprovanteData"
+        android:id="@+id/tvComprovanteSobreProduto"
+        android:text="Sobre o produto"
+        android:textColor="@color/white"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_below="@id/tvComprovanteSobreProduto"
+        android:id="@+id/tvComprovanteProduto"
+        android:text="Nome do produto"
+        android:textColor="@color/white"
+        android:textSize="15sp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/tvComprovanteSobreProduto"
+        android:id="@+id/tvComprovanteProdutoDado"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:textSize="15sp"
+        android:textAlignment="viewEnd"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_below="@id/tvComprovanteProduto"
+        android:id="@+id/tvComprovanteQuantidade"
+        android:text="Quantidade"
+        android:textColor="@color/white"
+        android:textSize="15sp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/tvComprovanteProduto"
+        android:id="@+id/tvComprovanteQuantidadeDado"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:textSize="15sp"
+        android:textAlignment="viewEnd"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_below="@id/tvComprovanteQuantidade"
+        android:id="@+id/tvComprovanteTipo"
+        android:text="Tipo do produto"
+        android:textColor="@color/white"
+        android:textSize="15sp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/tvComprovanteQuantidade"
+        android:id="@+id/tvComprovanteTipoDado"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:textSize="15sp"
+        android:textAlignment="viewEnd"/>
+
+    <TextView
+        style="@style/subtitulo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:layout_below="@id/tvComprovanteTipo"
+        android:id="@+id/tvComprovanteSobreCliente"
+        android:text="Quem pagou"
+        android:textColor="@color/white"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_below="@id/tvComprovanteSobreCliente"
+        android:id="@+id/tvComprovanteCliente"
+        android:text="Nome do cliente"
+        android:textColor="@color/white"
+        android:textSize="15sp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/tvComprovanteSobreCliente"
+        android:id="@+id/tvComprovanteClienteDado"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:textSize="15sp"
+        android:textAlignment="viewEnd"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_below="@id/tvComprovanteCliente"
+        android:id="@+id/tvComprovanteCpf"
+        android:text="CPF"
+        android:textColor="@color/white"
+        android:textSize="15sp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/tvComprovanteCliente"
+        android:id="@+id/tvComprovanteCpfDado"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:textSize="15sp"
+        android:textAlignment="viewEnd"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_below="@id/tvComprovanteCpf"
+        android:id="@+id/tvComprovanteEmail"
+        android:text="E-mail"
+        android:textColor="@color/white"
+        android:textSize="15sp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/tvComprovanteCpf"
+        android:id="@+id/tvComprovanteEmailDado"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:textSize="15sp"
+        android:textAlignment="viewEnd"/>
+
+</RelativeLayout>

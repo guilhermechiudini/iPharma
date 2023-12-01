@@ -1,0 +1,45 @@
+CREATE DATABASE ipharma;
+
+DROP DATABASE ipharma;
+
+USE ipharma;
+
+CREATE TABLE produto (
+	codigo_produto int not null auto_increment,
+    nome_produto varchar(45),
+    preco decimal(10,2),
+    quantidade int,
+    principio_ativo varchar(45),
+    laboratorio varchar(45),
+    dosagem varchar(45),
+    marca varchar(45),
+    volume decimal(10,2),
+    imagem longblob,
+    tipo int,
+    PRIMARY KEY (codigo_produto)
+);
+
+CREATE TABLE compra (
+	codigo_compra int not null auto_increment,
+    codigo_produto int,
+    codigo_usuario int,
+    data_compra date,
+    quantidade_compra int,
+    preco_compra decimal(10,2),
+    PRIMARY KEY (codigo_compra),
+    FOREIGN KEY (codigo_produto) REFERENCES produto (codigo_produto),
+    FOREIGN KEY (codigo_usuario) REFERENCES usuario (codigo_usuario)
+);
+
+CREATE TABLE usuario (
+	codigo_usuario int not null auto_increment,
+	nome_usuario varchar(45),
+    cpf varchar(14),
+    email varchar(60),
+    telefone varchar(24),
+    endereco varchar(60),
+    login varchar(45),
+    senha varchar(45),
+    tipo int,
+    PRIMARY KEY (codigo_usuario)
+);

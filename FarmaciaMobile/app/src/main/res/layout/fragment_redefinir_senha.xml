@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.RedefinirSenhaFragment"
+    android:background="@color/blue"
+    android:padding="25dp">
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/bRedefinirSenhaVoltar"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/icon_voltar_branco"/>
+
+    <TextView
+        style="@style/tituloCabecalho"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:id="@+id/tvRedefinirSenhaTitulo"
+        android:text="Redefinir Senha"
+        android:textColor="@color/white"/>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_below="@id/tvRedefinirSenhaTitulo"
+        android:gravity="center_vertical"
+        android:paddingLeft="50dp"
+        android:paddingRight="50dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/tvRedefinirSenhaUsuario"
+            android:text="Usuário"
+            android:textSize="13dp"
+            android:textColor="@color/white"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvRedefinirSenhaUsuario"
+            android:id="@+id/etRedefinirSenhaUsuario"
+            android:backgroundTint="@color/white"
+            android:textColor="@color/white"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/etRedefinirSenhaUsuario"
+            android:id="@+id/tvRedefinirSenhaEmail"
+            android:text="E-mail"
+            android:textSize="13dp"
+            android:textColor="@color/white"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvRedefinirSenhaEmail"
+            android:id="@+id/etRedefinirSenhaEmail"
+            android:inputType="textEmailAddress"
+            android:backgroundTint="@color/white"
+            android:textColor="@color/white"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            style="@style/botaoBranco"
+            android:background="@drawable/shape_botao_branco"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginTop="20dp"
+            android:layout_below="@id/etRedefinirSenhaEmail"
+            android:id="@+id/bRedefinirSenhaEnviar"
+            android:text="Enviar por E-mail"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>
